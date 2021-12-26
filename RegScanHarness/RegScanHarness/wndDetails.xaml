@@ -1,0 +1,22 @@
+﻿<Window x:Class="ScanX.wndDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Anti-Virus Details" Height="400" Width="400"
+        Icon="/Images/monitor.png" 
+        ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" 
+        SnapsToDevicePixels="True" FontFamily="Arial">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="4">
+            <TextBlock FontWeight="DemiBold" Margin="4" Text="Scan Type:" />
+            <TextBlock Name="txtType" Margin="4"/>
+            <TextBlock FontWeight="DemiBold" Margin="4" Text="Root Key:" />
+            <TextBlock Name="txtRoot" Margin="4"/>
+            <TextBlock FontWeight="DemiBold" Margin="4" Text="SubKey" />
+            <TextBlock Name="txtSubkey" Margin="4" />
+            <TextBlock FontWeight="DemiBold" Margin="4" Text="Value" />
+            <TextBlock Name="txtValue" Margin="4" />
+            <TextBlock FontWeight="DemiBold" Margin="4" Text="Details" />
+            <TextBlock Name="txtDetails" Margin="4"  TextWrapping="Wrap" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="ScanX.wndAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Scan" Height="215" Width="318"
+        Icon="/Images/monitor.png" 
+        ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" 
+        SnapsToDevicePixels="True" FontFamily="Arial">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ControlStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="92*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="209*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Margin="-1,0,0,0" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock FontSize="32" FontWeight="Bold" Text="Anti-Virus" Margin="3" SnapsToDevicePixels="False">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF1111A6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="#6DAAD6" ShadowDepth="2" BlurRadius="9"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Foreground="{StaticResource GlossBackgroundGradient}" FontSize="32" FontWeight="Bold" FontFamily="Tahoma" Text="Scan-V" Width="132" RenderTransformOrigin="0.658,0.465"/>
+            </StackPanel>
+            <TextBlock TextWrapping="Wrap" Margin="12,12,20,12" Text="All property and intellectual rights Reserved by fouad 2018 Read the license.txt file for more information on product licensing and contact." Height="45"/>
+            <Button Foreground="White" x:Name="btnClose" Margin="0,4,4,4" Content="Close" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                    Click="btnClose_Click" Height="31" Width="82" />
+        </StackPanel>
+    </Grid>
+</Window>

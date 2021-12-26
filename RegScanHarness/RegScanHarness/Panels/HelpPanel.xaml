@@ -1,0 +1,43 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ScanX.Panels.HelpPanel"
+             Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ControlStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0">
+            <StackPanel DockPanel.Dock="Left" Orientation="Vertical" Background="Transparent" Margin="2">
+                <TextBlock Margin="12" Foreground="Black" FontFamily="Arial" FontSize="20" FontWeight="DemiBold" Text="Help and Support"/>
+                <Image Margin="10,20" Width="160" Height="160" Source="/Images/about.png" />
+                <TextBlock FontSize="13" FontWeight="Normal" 
+					Width="Auto" Margin="10" TextAlignment="Left" 
+					VerticalAlignment="Top" TextWrapping="WrapWithOverflow"><Run Text="The systems registry is a large and complex database that 
+                    contains operating system data, user information, and software 
+                    settings for your computer. The registry scan searches for errors, 
+                    invalid settings, and software paths that no longer exist. 
+                    Once the scan has completed, you can choose to remove these items, 
+                    fixing problems and speeding up your computer."/></TextBlock>
+            </StackPanel>
+            <Line DockPanel.Dock="Right" Y1="0" Y2="500" 
+				Stroke="DarkGray" Width="0.5" 
+				VerticalAlignment="Stretch" />
+        </DockPanel>
+        <Grid Grid.Column="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
+                        <Button x:Name="btnHelpAbout" Content="About Us.." Click="Start_Clicked" Width="250" Height="40" Margin="20" Foreground="#FCFCFC" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

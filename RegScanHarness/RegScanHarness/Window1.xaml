@@ -1,0 +1,73 @@
+﻿<skin:RCMW x:Class="RegScanHarness.Window1"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:skin="clr-namespace:vhRCMW;assembly=vhRCMW"
+            xmlns:local="clr-namespace:RegScanHarness"
+            xmlns:pnl="clr-namespace:RegScanHarness.Panels"
+            Title="VTDev: Scan-X" 
+            Height="600" Width="800" Icon="/Images/monitor2.png" 
+            SnapsToDevicePixels="True"
+            ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
+            AllowsTransparency="True" WindowStyle="None">
+    
+    <skin:RCMW.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ControlStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </skin:RCMW.Resources>
+
+    <Grid Name="grdWindowGrid" Height="Auto" Width="Auto" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- main window -->
+        <Border Grid.Row="1" Name="brdWindowBorder" SnapsToDevicePixels="True" Background="White"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0,-32,0,0">
+            <!-- toolbar container -->
+            <Grid Name="grdToolbar" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="54" />
+                </Grid.RowDefinitions>
+                <!-- toolbar -->
+                <GroupBox Grid.Row="0" Margin="0" Height="Auto" Background="Black" Style="{StaticResource ToolbarStyle}">
+                    <StackPanel Name="stkToolBarPanel" Height="Auto" Orientation="Horizontal" Margin="0">
+                        <ToggleButton Name="btnRegscan" Height="40" Width="40" Checked="ToggleButton_Checked" Style="{StaticResource ToggleButtonStyle}">
+                            <Image Source="/Images/monitor2sm.png"/>
+                        </ToggleButton>
+                        <!--ToggleButton Name="Part_MruScanButton" Height="40" Width="40" Checked="ToggleButton_Checked" Style="{StaticResource ToggleButtonStyle}">
+                            <Image Source="/Images/drivesm.png"/>
+                        </ToggleButton-->
+                        <ToggleButton Name="btnOptions" Height="40" Width="40" Checked="ToggleButton_Checked" Style="{StaticResource ToggleButtonStyle}">
+                            <Image Source="/Images/optionssm.png"/>
+                        </ToggleButton>
+                        <ToggleButton Name="btnHelp" Height="40" Width="40" Checked="ToggleButton_Checked" Style="{StaticResource ToggleButtonStyle}">
+                            <Image Source="/Images/aboutsm.png" IsEnabled="True" />
+                        </ToggleButton>
+                    </StackPanel>
+                </GroupBox>
+                <!-- houses usercontrol panels-->
+                <Grid Name="grdContainer" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ButtonBase.Click="Button_Clicked">
+                    <pnl:RegScanPanel />
+                </Grid>
+                <!-- status bar -->
+                <GroupBox Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" Style="{StaticResource GroupBoxStyle}">
+                    <StackPanel Orientation="Horizontal" Margin="2">
+                        <Image Name="imgStatusBar" Source="/Images/monitor.png" Margin="4" 
+                               Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock Name="txtStatusBar" Width="Auto" FontFamily="Arial" FontSize="11" FontWeight="Normal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            Status: Registry Scan Pending..
+                        </TextBlock>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </Border>
+    </Grid>
+
+
+</skin:RCMW>

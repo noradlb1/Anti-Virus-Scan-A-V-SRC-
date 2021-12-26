@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="ScanX.Panels.RegScanPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto" SnapsToDevicePixels="True" 
+             HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+             FontFamily="Arial">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ControlStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0">
+            <StackPanel DockPanel.Dock="Left" Orientation="Vertical" Background="Transparent" Margin="2">
+                <TextBlock Margin="12" Foreground="Black" FontFamily="Arial" FontSize="20" FontWeight="DemiBold">
+                    Registry Scan
+                </TextBlock>
+                <Image Margin="10,20" Width="160" Height="160" Source="/Images/monitor.png" />
+                <TextBlock FontSize="13" FontWeight="Normal" 
+                           Width="Auto" Margin="10" TextAlignment="Left" 
+                           VerticalAlignment="Top" TextWrapping="WrapWithOverflow">
+                    The systems registry is a large and complex database that 
+                    contains operating system data, user information, and software 
+                    settings for your computer. The registry scan searches for errors, 
+                    invalid settings, and software paths that no longer exist. 
+                    Once the scan has completed, you can choose to remove these items, 
+                    fixing problems and speeding up your computer.
+                </TextBlock>
+            </StackPanel>
+            <Line DockPanel.Dock="Right" Y1="0" Y2="500" 
+                  Stroke="DarkGray" Width="0.5" 
+                  VerticalAlignment="Stretch" />
+        </DockPanel>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="44" />
+            </Grid.RowDefinitions>
+            <StackPanel Name="stkCheckPanel" Grid.Row="0" Margin="30,6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock Margin="8" FontFamily="Arial" FontSize="20" FontWeight="Bold" Text="Scan Options" />
+                <CheckBox Name="chkControlScan" Margin="10,4,2,2" IsChecked="True">Control Scan</CheckBox>
+                <CheckBox Name="chkUserScan" Margin="10,4,2,2" IsChecked="True">User Scan</CheckBox>
+                <CheckBox Name="chkSoftwareScan" Margin="10,4,2,2" IsChecked="True">System Software</CheckBox>
+                <CheckBox Name="chkFontScan" Margin="10,4,2,2" IsChecked="True">System Fonts</CheckBox>
+                <CheckBox Name="chkHelpScan" Margin="10,4,2,2" IsChecked="True">System Help Files</CheckBox>
+                <CheckBox Name="chkLibraryScan" Margin="10,4,2,2" IsChecked="True">Shared Libraries</CheckBox>
+                <CheckBox Name="chkStartupScan" Margin="10,4,2,2" IsChecked="True">Startup Entries</CheckBox>
+                <CheckBox Name="chkUninstallScan" Margin="10,4,2,2" IsChecked="True">Installation Strings</CheckBox>
+                <CheckBox Name="chkVdmScan" Margin="10,4,2,2" IsChecked="True">Virtual Devices</CheckBox>
+                <CheckBox Name="chkHistoryScan" Margin="10,4,2,2" IsChecked="True">History and Start Menu</CheckBox>
+                <CheckBox Name="chkDeepScan" Margin="10,4,2,2" IsChecked="True">Deep System Scan</CheckBox>
+                <CheckBox Name="chkMruScan" Margin="10,4,2,2" IsChecked="True">MRU Lists</CheckBox>
+            </StackPanel>
+            <Button Name="btnRegScanStart" Click="Start_Clicked" Grid.Row="1" Width="100" Height="30" HorizontalAlignment="Right" Margin="2,2,25,2" Foreground="#FCFCFC">
+                Start
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anti-Virus", "RegScanHarness\RegScanHarness\Anti-Virus.csproj", "{E9C048F5-8E21-4721-9B55-E6FF332B6C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anti-Virus 2", "RegScanHarness\CircularProgressBar\Anti-Virus 2.csproj", "{3F771FC1-3F04-48D9-B412-A23F6E57F59D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anti-Virus 1", "Anti-Virus Scan Virus\Anti-Virus 1.csproj", "{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F771FC1-3F04-48D9-B412-A23F6E57F59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F771FC1-3F04-48D9-B412-A23F6E57F59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F771FC1-3F04-48D9-B412-A23F6E57F59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F771FC1-3F04-48D9-B412-A23F6E57F59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
